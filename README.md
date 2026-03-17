@@ -5,7 +5,7 @@
 This program is written in C to simulate as restaurant booking management system.  
 Shout out to Okami Japanese Restaurant Pennant Hills.
 
-\---
+\
 
 ## 2\. Main Features
 
@@ -34,7 +34,7 @@ Shout out to Okami Japanese Restaurant Pennant Hills.
   * Remove duplicate IDs
   * Remove time conflicts
 
-\---
+\
 
 ## 3\. Data Structure
 
@@ -50,7 +50,7 @@ Each booking includes:
 * Number of customers: int (1 – 6)
 * Customer name: char, maximum 50 characters
 
-\---
+\
 
 ## 4\. Program Structure
 
@@ -60,7 +60,7 @@ Each booking includes:
 |booking.h|Struct definitions and function prototypes|
 |booking.c|Implementation of booking operations|
 
-\---
+\
 
 ## 5\. Data File Format
 
@@ -71,7 +71,7 @@ ID table year month day hour minute pax name
 Example:
 00001 5 26 3 17 18 30 4 Nguyen Van A
 
-\---
+\
 
 ## 6\. Rules
 
@@ -84,7 +84,7 @@ Example:
 * Date must be valid (including leap year handling)
 * Booking ID is automatically generated and incremented
 
-\---
+\
 
 ## 7\. Notes
 
@@ -103,4 +103,3 @@ Users should enter at least 2 characters to avoid excessive results.
   * full.txt: All tables fully booked on the same day
   * dirty.txt: Contains invalid data (duplicate ID, time conflicts, exceeding pax, etc.)
 * When entering a filename for saving/exporting, include the full filename with the .txt extension.
-
