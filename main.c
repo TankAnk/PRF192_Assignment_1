@@ -719,7 +719,7 @@ int main()
 {
     int choice, size = 0, next_id = 1;
     booking booking_list[MAX_SIZE];
-	load_file(booking_list, &size, &next_id, "dirty.txt");
+	load_file(booking_list, &size, &next_id, "default.txt");
 	printf("Bookings automatically loaded!\n");
 	
 	do
