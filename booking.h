@@ -43,7 +43,7 @@ int clear_booking(booking booking_list[], int *size, int *next_id);
 void swap_booking(booking *b1, booking *b2);
 void descending_sort_by_id(booking booking_list[], int size);
 void ascending_sort_by_id(booking booking_list[], int size);
-unsigned long time_key(int y, int mth, int d, int h, int m);
+unsigned long long time_key(int y, int mth, int d, int h, int m);
 void ascending_sort_by_time(booking booking_list[], int size);
 void descending_sort_by_time(booking booking_list[], int size);
 void ascending_sort_by_pax(booking booking_list[], int size);
