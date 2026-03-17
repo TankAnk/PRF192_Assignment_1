@@ -522,11 +522,11 @@ void remove_id_collision(booking booking_list[], int *size)
 
 void remove_time_collision(booking booking_list[], int *size)
 {
-    int i, j;
+    int i, j, t1, t2, time_diff;
 
     for (i = 0; i < *size - 1; i++)
     {
-        int t1 = booking_list[i].hour * 60 + booking_list[i].minute;
+        t1 = booking_list[i].hour * 60 + booking_list[i].minute;
 
         for (j = i + 1; j < *size; j++)
         {
@@ -535,8 +535,8 @@ void remove_time_collision(booking booking_list[], int *size)
                 booking_list[i].day == booking_list[j].day &&
                 booking_list[i].table_no == booking_list[j].table_no)
             {
-                int t2 = booking_list[j].hour * 60 + booking_list[j].minute;
-                int time_diff = (t1 > t2) ? (t1 - t2) : (t2 - t1);
+                t2 = booking_list[j].hour * 60 + booking_list[j].minute;
+                time_diff = (t1 > t2) ? (t1 - t2) : (t2 - t1);
 
                 if (time_diff < TIME_LIMIT)
                 {
