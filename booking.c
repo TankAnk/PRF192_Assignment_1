@@ -270,9 +270,9 @@ void ascending_sort_by_id(booking booking_list[], int size)
 				swap_booking(&booking_list[i], &booking_list[j]);
 }
 
-unsigned long time_key(int y, int mth, int d, int h, int m)
+unsigned long long time_key(int y, int mth, int d, int h, int m)
 {
-	return (unsigned long)((unsigned long long)y*100000000ULL + mth*1000000ULL + d*10000ULL + h*100ULL + m);
+	return (unsigned long long)((unsigned long long)y*100000000ULL + mth*1000000ULL + d*10000ULL + h*100ULL + m);
 }
 
 void ascending_sort_by_time(booking booking_list[], int size)
@@ -284,7 +284,7 @@ void ascending_sort_by_time(booking booking_list[], int size)
     }
 	
 	int i, j, min;
-	unsigned long time_min, time_j;
+	unsigned long long time_min, time_j;
 	for (i = 0; i < size - 1; i++)
 	{
 		min = i;
@@ -313,7 +313,7 @@ void descending_sort_by_time(booking booking_list[], int size)
     }
 	
 	int i, j, max;
-	unsigned long time_max, time_j;
+	unsigned long long time_max, time_j;
 	for (i = 0; i < size - 1; i++)
 	{
 		max = i;
