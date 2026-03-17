@@ -272,7 +272,7 @@ void ascending_sort_by_id(booking booking_list[], int size)
 
 unsigned long time_key(int y, int mth, int d, int h, int m)
 {
-	return (unsigned long)(y*100000000 + mth*1000000 + d*10000 + h*100 + m);
+	return (unsigned long)((unsigned long long)y*100000000ULL + mth*1000000ULL + d*10000ULL + h*100ULL + m);
 }
 
 void ascending_sort_by_time(booking booking_list[], int size)
