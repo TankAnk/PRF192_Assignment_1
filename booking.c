@@ -270,9 +270,15 @@ void ascending_sort_by_id(booking booking_list[], int size)
 				swap_booking(&booking_list[i], &booking_list[j]);
 }
 
-unsigned long long time_key(int y, int mth, int d, int h, int m)
+int compare_time(booking a, booking b)
 {
-	return (unsigned long long)((unsigned long long)y*100000000ULL + mth*1000000ULL + d*10000ULL + h*100ULL + m);
+    if (a.year != b.year) return a.year - b.year;
+    if (a.month != b.month) return a.month - b.month;
+    if (a.day != b.day) return a.day - b.day;
+    if (a.hour != b.hour) return a.hour - b.hour;
+    if (a.minute != b.minute) return a.minute - b.minute;
+
+    return 0;
 }
 
 void ascending_sort_by_time(booking booking_list[], int size)
@@ -283,25 +289,11 @@ void ascending_sort_by_time(booking booking_list[], int size)
         return;
     }
 	
-	int i, j, min;
-	unsigned long long time_min, time_j;
+	int i, j;
 	for (i = 0; i < size - 1; i++)
-	{
-		min = i;
-		time_min = time_key(booking_list[min].year, booking_list[min].month, booking_list[min].day,
-					booking_list[min].hour, booking_list[min].minute);
 		for (j = i + 1; j < size; j++)
-		{
-			time_j = time_key(booking_list[j].year, booking_list[j].month, booking_list[j].day,
-						booking_list[j].hour, booking_list[j].minute);
-			if (time_min > time_j)
-			{
-				min = j;
-				time_min = time_j;
-			}
-		}
-		if (min != i) swap_booking(&booking_list[i], &booking_list[min]);
-	}
+			if (compare_time(booking_list[i], booking_list[j]) > 0)
+				swap_booking(&booking_list[i], &booking_list[j]);
 }
 
 void descending_sort_by_time(booking booking_list[], int size)
@@ -312,25 +304,11 @@ void descending_sort_by_time(booking booking_list[], int size)
         return;
     }
 	
-	int i, j, max;
-	unsigned long long time_max, time_j;
+	int i, j;
 	for (i = 0; i < size - 1; i++)
-	{
-		max = i;
-		time_max = time_key(booking_list[max].year, booking_list[max].month, booking_list[max].day,
-					booking_list[max].hour, booking_list[max].minute);
 		for (j = i + 1; j < size; j++)
-		{
-			time_j = time_key(booking_list[j].year, booking_list[j].month, booking_list[j].day,
-						booking_list[j].hour, booking_list[j].minute);
-			if (time_max < time_j)
-			{
-				max = j;
-				time_max = time_j;
-			}
-		}
-		if (max != i) swap_booking(&booking_list[i], &booking_list[max]);
-	}
+			if (compare_time(booking_list[i], booking_list[j]) < 0)
+				swap_booking(&booking_list[i], &booking_list[j]);
 }
 
 void ascending_sort_by_pax(booking booking_list[], int size)
