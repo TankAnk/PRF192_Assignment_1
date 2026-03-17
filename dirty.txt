@@ -1,0 +1,30 @@
+00060 5 26 12 12 18 30 3 Valid One
+00061 5 26 12 12 19 0 2 Time Conflict 1
+00062 5 26 12 12 20 0 4 Time Conflict 2
+
+00063 200 26 11 10 14 0 3 Invalid Table
+00064 4 26 13 10 15 0 2 Invalid Month
+00065 6 26 2 30 10 0 2 Invalid Day
+00066 7 26 10 10 8 30 2 Invalid Hour
+00067 8 26 10 10 21 30 2 Invalid Minute Range
+
+00068 9 26 10 10 12 0 10 Too Many Pax
+00069 10 26 10 10 13 0 0 Zero Pax
+
+00070 3 26 11 11 15 0 3 Duplicate ID
+00070 4 26 11 12 16 0 2 Duplicate ID Again
+
+00071 2 26 9 9 10 0 2 Valid Two
+00072 2 26 9 9 11 0 3 Time Conflict 3
+
+00073 1 26 12 25 21 0 2 Valid Edge Time
+00074 1 26 12 25 21 1 2 Invalid After Closing
+
+00075 15 26 6 15 14 30 4 Valid Three
+00076 15 26 6 15 16 0 2 Time Conflict 4
+
+00077 20 26 5 10 12 0 3 Valid Four
+00077 21 26 5 11 13 0 2 Duplicate ID Different Table
+
+00078 30 99 12 31 20 59 6 Valid Max Values
+00079 31 25 12 31 20 0 3 Invalid Year (below 26)
