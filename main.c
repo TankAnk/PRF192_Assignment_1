@@ -729,12 +729,15 @@ int main()
 		if (choice < 0 || choice > 10)
 		{
 			printf("Invalid option!\n");
+			if (size > 0) save_file(booking_list, size, "output.txt");
 			return 0;
 		}
 		
 		switch (choice)
 		{
-			case 0: return 0;
+			case 0:
+				if (size > 0) save_file(booking_list, size, "output.txt");
+				return 0;
 			
 			case 1:
 				if (case_1(booking_list, &size, &next_id)) 
