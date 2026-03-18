@@ -18,7 +18,7 @@ Shout out to Okami Japanese Restaurant Pennant Hills.
   * Time
   * Date
   * Number of customers (pax)
-* Update booking
+* Update booking by ID
 * Delete booking by ID
 * Display all bookings
 * Sort bookings by:
