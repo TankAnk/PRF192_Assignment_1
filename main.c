@@ -374,7 +374,7 @@ int case_4_2(booking booking_list[], int size)
 	}
 	clear_input_buffer();
 	
-	if (strlen(name) < 3)
+	if (strlen(name) < 2)
 	{
 		printf("	Please enter at least 2 characters!\n");
 		return 0;
